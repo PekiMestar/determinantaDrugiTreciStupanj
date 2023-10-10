@@ -1,0 +1,56 @@
+#include <iostream>
+
+using namespace std; 
+
+int main( ) 
+{
+      int broj, rez = 0, det[3][3];
+
+      cout<<"Za determinantu drugog reda upišite 2, a za determinantu treće reda upišite 3."<<endl;
+      cin>>broj;
+      
+      for(int i = 0; i < broj; i++){
+
+     for(int j = 0;j < broj; j++){
+
+      cout<<"Unesite veijednost u polje "<<i+1<<<<j+1<<: ";
+      cin>>det[i][j];
+
+     }
+
+}
+
+cout<<endl;
+
+for(int i = 0; i < broj; i++){
+
+     for(int j = 0; j < broj; j++){
+
+        cout<<det[i][j]<<"  ";
+
+     }
+     
+cout<<endl;
+
+    }
+    
+    cout<<endl;
+
+if(broj == 2){
+
+   rez = (det[0][0] * det[1][1]) - (det[0][1] * det[1][0]);
+   
+   cout<<"Rezulatat determinante je: "<<rez<<endl;
+
+   }
+   
+if(broj == 3){
+    
+    rez =  det[0][0] * det[1][1] * det[2][2] + det[0][1] * det[1][2] * det[2][0] + det[0][2] * det[1][0] * det[2][1] - det[0][2] * det[1][1] * det[2][0] - det[0][1] * det[1][0] * det[2][2] - det[0][0] * det[1][2] * det[2][1];
+    
+    cout<<"Rezulatat determinante je: "<<rez<<endl;
+
+    }
+    
+    return 0;
+}
